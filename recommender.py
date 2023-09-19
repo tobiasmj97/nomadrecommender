@@ -49,7 +49,7 @@ def similar_place(place, n):
   sim_places = le_place.inverse_transform(np.argsort(cosine_distance_matrix_places[ix,:])[:n+1])
   return sim_places[1:]
 
-st.title('Nomad Place Recommender')
+st.title('Nomad Place Recommender vs Tobias')
 
 one_city = st.selectbox('Select Place', trips.place_slug.unique())
 n_recs_c = st.slider('How many recs?', 1, 20, 2)
